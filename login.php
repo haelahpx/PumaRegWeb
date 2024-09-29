@@ -47,15 +47,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Pumareg Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+</style>
 <body class="bg-gray-100 h-screen">
 <div class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="w-96 p-6 bg-white border border-gray-200 rounded-lg shadow-md">
         <div class="flex gap-24 items-center">
             <div class="text-left">
                 <h2 class="text-2xl font-bold text-gray-800">Login</h2>
-                <h3 class="text-sm text-gray-800">President University </h3>
+                <h3 class="text-sm text-gray-800">PresidentUniversity </h3>
             </div>
             <img class="w-24 cursor-pointer" src="https://computing.president.ac.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.554235d9.png&w=256&q=75" alt="...">
         </div>

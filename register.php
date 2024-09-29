@@ -26,15 +26,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>Register</title>
 </head>
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+</style>
 
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-sm">
         <div class="flex gap-24 items-center">
             <div class="text-left">
             <h2 class="text-2xl font-bold text-gray-800">Register</h2>
-                <h3 class="text-sm text-gray-800">President University </h3>
+                <h3 class="text-sm text-gray-800">PresidentUniversity </h3>
             </div>
             <img class="w-24 cursor-pointer" src="https://computing.president.ac.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.554235d9.png&w=256&q=75" alt="...">
         </div>
