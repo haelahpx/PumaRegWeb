@@ -84,36 +84,35 @@ $allProductsResult = $conn->query($allProductsQuery);
     <h1 class="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-sky-500 to-sky-400 text-white p-4 rounded-lg shadow-lg">President University Merch</h1>
 
     <h2 class="text-3xl font-semibold mt-8 text-center text-sky-700 shadow-md rounded-lg p-2">All Items</h2>
-    <div class="relative mt-4 px-4 md:px-0">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <?php while ($allRow = $allProductsResult->fetch_assoc()) { ?>
-                    <div class="swiper-slide">
-                        <div class="card bg-white rounded-lg shadow-md overflow-hidden">
-                            <img class="w-full h-48 object-cover" src="images/<?php echo $allRow['image']; ?>" alt="<?php echo $allRow['productname']; ?>">
-                            <div class="p-4 flex flex-col h-56">
-                                <h2 class="text-lg font-semibold flex-grow truncate"><?php echo $allRow['productname']; ?></h2>
-                                <p class="text-gray-500 mb-2"><?php echo $allRow['description']; ?></p>
-                                <p class="text-red-500 mb-2"><?php echo number_format($allRow['price'], 2); ?></p>
-                                <a href="buy.php?id=<?php echo $allRow['product_id']; ?>" class="mt-auto text-center text-white bg-sky-500 rounded-lg p-2">Buy</a>
-                            </div>
+<div class="relative mt-4 px-4 md:px-0">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <?php while ($allRow = $allProductsResult->fetch_assoc()) { ?>
+                <div class="swiper-slide">
+                    <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                        <img class="w-full h-48 object-cover" src="images/<?php echo $allRow['image']; ?>" alt="<?php echo $allRow['productname']; ?>">
+                        <div class="p-4 flex flex-col h-56">
+                            <h2 class="text-lg font-semibold flex-grow truncate"><?php echo $allRow['productname']; ?></h2>
+                            <p class="text-gray-500 mb-2"><?php echo $allRow['description']; ?></p>
+                            <p class="text-red-500 mb-2"><?php echo number_format($allRow['price'], 2); ?></p>
+                            <a href="buy.php?id=<?php echo $allRow['product_id']; ?>" class="mt-auto text-center text-white bg-sky-500 rounded-lg p-2">Buy</a>
                         </div>
                     </div>
-                <?php } ?>
-            </div>
-            <div class="swiper-pagination"></div>
+                </div>
+            <?php } ?>
         </div>
-        <div class="absolute top-1/2 left-0 transform -translate-y-1/2 z-10">
-            <div class="swiper-button-prev text-gray-700 bg-white rounded-full p-2 hover:bg-gray-200 transition-colors">
-                &#9664;
-            </div>
-        </div>
-        <div class="absolute top-1/2 right-0 transform -translate-y-1/2 z-10">
-            <div class="swiper-button-next text-gray-700 bg-white rounded-full p-2 hover:bg-gray-200 transition-colors">
-                &#9654;
-            </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="absolute top-1/2 left-0 transform -translate-y-1/2 z-10">
+        <div class="swiper-button-prev text-gray-700 bg-white rounded-full p-2 hover:bg-gray-200 transition-colors">
         </div>
     </div>
+    <div class="absolute top-1/2 right-0 transform -translate-y-1/2 z-10">
+        <div class="swiper-button-next text-gray-700 bg-white rounded-full p-2 hover:bg-gray-200 transition-colors">
+        </div>
+    </div>
+</div>
+
 
     <h2 class="text-2xl font-semibold mb-4 pt-6 text-sky-700">Filtered Items</h2>
     <form method="POST" class="mb-4">
