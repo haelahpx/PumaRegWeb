@@ -138,6 +138,8 @@ $conn->close();
     <?php if (!$image): ?>
         <p class='text-center text-red-500 mt-4'><?php echo $message; ?></p>
     <?php endif; ?>
+
+    
 </body>
 
 </html>

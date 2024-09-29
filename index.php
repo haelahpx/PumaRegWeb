@@ -69,9 +69,21 @@ $result = $conn->query($query);
         <?php } ?>
     </main>
 
-    <footer class="bg-gray-100">
-        <p class="text-center py-4">Copyright Haikal</p>
-    </footer>
+    <footer class="bg-gray-100 py-6">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <img src="https://computing.president.ac.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.554235d9.png&w=256&q=75" alt="Logo" class="h-8 w-8">
+            <span class="font-semibold text-gray-700">PUMA</span>
+        </div>
+
+        <nav class="flex space-x-4">
+            <a href="#" class="text-gray-600 hover:text-gray-900">Home</a>
+        </nav>
+
+        <p class="text-gray-600">&copy; 2024 Haikal. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 
 </html>
