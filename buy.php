@@ -71,36 +71,36 @@ $conn->close();
 </head>
 
 <body>
-    <header class="bg-white">
-        <nav class="flex justify-between items-center w-full h-16 shadow-md sticky top-0 z-50 bg-white">
-            <div class="p-4 pl-10 flex items-center">
-                <img class="w-24 cursor-pointer" src="https://computing.president.ac.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.554235d9.png&w=256&q=75" alt="...">
-                <div class="lg:visible invisible">
-                    <p class="pl-4 font-bold">President University</p>
-                    <p class="pl-4 font-normal">Puma Merch</p>
+<header class="bg-white">
+    <nav class="flex justify-between items-center w-full h-16 shadow-md sticky top-0 z-50 bg-white">
+        <div class="p-4 pl-6 flex items-center">
+            <img class="w-20 md:w-24 cursor-pointer" src="https://computing.president.ac.id/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.554235d9.png&w=256&q=75" alt="...">
+            <div class="hidden lg:block">
+                <p class="pl-4 font-bold text-sm md:text-base">President University</p>
+                <p class="pl-4 font-normal text-xs md:text-sm">Puma Merch</p>
+            </div>
+        </div>
+        <div class="nav-links p-4 pr-6">
+            <ul class="flex flex-row items-center md:gap-[4vw] gap-4 md:gap-8 text-xs md:text-sm">
+                <li>
+                    <a class="hover:text-gray-500" href="#">Home</a>
+                </li>
+                <?php if ($loggedIn) { ?>
+                    <ul class="py-2" aria-labelledby="user-menu-button">
+                        <li>
+                            <a href="adminpanel/logout.php" class="text-sm text-black hover:text-white border border-2 border-sky-500 rounded-lg p-2 md:p-4 hover:bg-sky-500">Sign out</a>
+                        </li>
+                    </ul>
+                <?php } else { ?>
+                    <div class="flex space-x-2 md:space-x-3">
+                        <a href="login.php" class="text-sm text-black hover:text-white rounded-lg p-2 md:p-4 hover:bg-sky-500">Log In</a>
+                        <a href="register.php" class="text-sm text-black hover:text-white border border-2 border-sky-500 rounded-lg p-2 md:p-4 hover:bg-sky-500">Sign Up</a>
+                    </div>
+                <?php } ?>
+            </ul>
                 </div>
-            </div>
-            <div class="nav-links p-4 pr-10">
-                <ul class="flex flex-row items-center md:gap-[4vw] gap-8">
-                    <li>
-                        <a class="hover:text-gray-500" href="index.php">Home</a>
-                    </li>
-                    <?php if ($loggedIn) { ?>
-                        <ul class="py-2" aria-labelledby="user-menu-button">
-                            <li>
-                                <a href="adminpanel/logout.php" class="text-sm text-black hover:text-white border border-2 border-sky-500 rounded-lg p-4 hover:bg-sky-500">Sign out</a>
-                            </li>
-                        </ul>
-                    <?php } else { ?>
-                        <div class="flex space-x-3">
-                            <a href="login.php" class="text-sm text-black hover:text-white rounded-lg p-4 hover:bg-sky-500">Log In</a>
-                            <a href="register.php" class="text-sm text-black hover:text-white border border-2 border-sky-500 rounded-lg p-4 hover:bg-sky-500">Sign Up</a>
-                        </div>
-                    <?php } ?>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    </nav>
+</header>
     <div class="max-w-lg mx-auto mt-10 bg-white rounded-lg shadow-md overflow-hidden">
         <?php if ($image): ?>
             <img class="w-full h-48 object-cover" src="images/<?php echo $image; ?>" alt="<?php echo $product_name; ?>">
@@ -138,7 +138,6 @@ $conn->close();
     <?php if (!$image): ?>
         <p class='text-center text-red-500 mt-4'><?php echo $message; ?></p>
     <?php endif; ?>
-
     
 </body>
 
